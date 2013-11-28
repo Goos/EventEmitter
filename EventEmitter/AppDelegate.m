@@ -24,7 +24,7 @@
     // Adding eventlisteners with selectors. Will always attempt to set the
     // emitter as the first argument, and then any further arguments
     // in the order they are provided.
-    [obj on:kSomeObjectDoneEvent call:@selector(someObjectReceiedDoneEvent:) target:self];
+    [obj on:kSomeObjectDoneEvent call:@selector(someObjectReceivedDoneEvent:) target:self];
     [obj on:kSomeObjectErrorEvent call:@selector(someObject:receivedError:) target:self];
     
     // Adding eventlisteners with blocks. Sends the emitter as the first argument,
@@ -47,7 +47,7 @@
     return YES;
 }
 
-- (void)someObjectReceiedDoneEvent:(SomeObjectWithEvents *)obj
+- (void)someObjectReceivedDoneEvent:(SomeObjectWithEvents *)obj
 {
     NSLog(@"Done-event selector listener fired!");
 }
